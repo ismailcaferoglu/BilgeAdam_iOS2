@@ -660,3 +660,17 @@ func setPrime(){
 setPrime()
 
 
+var studentArray:[[String:Any]] = [
+                                   ["name":"Büşra","exam_first":40,"exam_second":60],
+                                   ["name":"Deniz","exam_first":20,"exam_second":30],
+                                   ["name":"Damla","exam_first":70,"exam_second":50],
+                                   ["name":"Ece","exam_first":30,"exam_second":90],
+                                   ["name":"Barış","exam_first":100,"exam_second":20],
+                                   ["name":"Sabri","exam_first":70,"exam_second":40],
+                                   ["name":"Oğuzhan","exam_first":90,"exam_second":70],
+                                   ["name":"Orhan","exam_first":65,"exam_second":35],
+                                   ["name":"Burak","exam_first":70,"exam_second":30],
+                                   ["name":"Aydın","exam_first":80,"exam_second":80],
+                                   ["name":"Oğuz","exam_first":45,"exam_second":75]]
+
+
