@@ -1,11 +1,39 @@
 import UIKit
 
+
+func modelYarat(){
+    
+    print(dictionaryArray)
+    let result = "Model Yaratıldı"
+    print("model oluşturuldu")
+    kalibaYerlestir(model: result)
+}
+
+modelYarat()
+
+func tabaniTak(kalip:String){
+    let result = kalip + "ve takıldı."
+    print("işlem tamam.")
+    boyama(ayakkabi: result)
+}
+
+func boyama(ayakkabi:String)-> String {
+    print(ayakkabi + "Tam anlamıyla harika")
+    
+    return "43 numara harika bir ayakkabı üretildi. "
+}
+
+func kalibaYerlestir(model:String){
+    let result = model + " ve işlendi."
+    print("Kalıp Hazır")
+    tabaniTak(kalip: result)
+}
+
 var greeting = "Hello, playground"
 
 var firstString:String = "Hello"
 
 var pageNonOptional:String!
-
 var pageOptional:String?
 
 var firstInt:Int = 10
@@ -13,10 +41,9 @@ var secondInt = 0
 
 
 var firstDouble:Double = 1.5
-
 var firstFloat:Float = 2.5
 
-
+let thirdString = "Third"
 
 //MARK: -- Arrays
 var nameArray:[String?] = ["Ali","Veli",nil,"Ayşe","Fatma","Hayriye","Hayriye","Hayriye","Hayriye","Hayriye","Hayriye","Hayriye",nil,"Ali","Ali","Ali","Ali","Ali","Mert","Ayça","Mahir","Defne"]
@@ -26,6 +53,9 @@ var ozArray:[String]
 var hasArray:Array<String>
 
  
+nameArray.forEach({ name in
+    print(" name: \(name)")
+})
 
 nameArray.enumerated().forEach({ index,name in
     print("for each index:\(index) name: \(name)")
@@ -47,15 +77,22 @@ for (sayac,eleman) in nameArray.enumerated() {
     print(eleman)
 }
 
-let contains = nameArray.filter({ $0 == "Mehmet"})
+let filter = nameArray.filter({ $0 == "Hayriye"})
+print("------........\(filter)")
+let filteredMehmet = ["Mehmet","Mehmet","Mehmet","Mehmet"].count
 
-if contains.count == 0 {
+if filter.count == 0 {
     print("Array içinde Mehmet yoktur.")
 }
 
 let test = nameArray.contains(where: {$0 == "Mehmet"})
 
 print("---------------\(test)")
+
+let flatArray = [[1,2,3],[6,4,3,9],[21,33,5,8,3,6,0,2,7]]
+
+let flatResult = flatArray.flatMap({$0})
+print(flatResult)
 
 
 let filteredArray = nameArray.filter({ name in
@@ -144,11 +181,23 @@ default:
 
 
 
-//MARK -- Dictionaries
+
+
+//MARK: Type Casting
+if let age = anyString as? String {
+    age.count
+    //print("Sonuç-------\(age + 20)")
+}
+
+if let name = anyDictionary["name"] as? Int {
+    print(name * name)
+}
+
+//MARK: -- Dictionaries
 
 var busraDictionary:[String:String] = ["ad":"Büşra",
                                         "soyad":"Erim",
-                                        "yas":"22"]
+                                       "yas":"22"]
 
 var denizDictionary:[String:String] = ["ad":"Deniz",
                                         "soyad":"Atmaca",
@@ -159,9 +208,12 @@ var damlaDictionary:[String:String] = ["ad":"Damla",
                                         "yas":"24"]
 
 
-var dictionaryArray:[[String:String]] = [denizDictionary,damlaDictionary,busraDictionary]
+var dictionaryArray:[  [String:String]  ] = [denizDictionary,damlaDictionary,busraDictionary]
 
 
+
+busraDictionary["at"] = "Midilli"
+print(busraDictionary)
 
 
 var anyDictionary:[String:Any] = ["name":"Ali","age":21,"length":1.86,"birthday":2000]
@@ -181,16 +233,7 @@ var iosClassArray:[[String:Any]] = [["name":"Büşra","age":21,"length":1.86,"bi
 
 let age = anyDictionary["age"]
 
-
-//MARK: Type Casting
-if let age = age as? Int {
-    print("Sonuç-------\(age + 20)")
-}
-
-if let name = anyDictionary["name"] as? Int {
-    print(name * name)
-}
-
+var anyString:Any = "26"
 
 
 
@@ -237,8 +280,9 @@ print(array2Set.count)
 var setToArray = Array(array2Set)
 print(setToArray)
 
-var set1:Set<Int> = [1,2,3,4]
+var set1:Set<Int> = [1,4,2,3,4]
 var set2:Set<Int> = [3,4,5,6]
+print(set1)
 
 print(set1.union(set2))
 
@@ -252,16 +296,18 @@ print(set1.subtracting(set2))
 func sortDictionaryById(){
     print("sortDictionaryById")
 }
+
 sortDictionaryById()
 
 
-func sortDictionary(_ value:Int = 15){
+func sortDictionary(_ value:Int){
     
     var result = 2
     result += value
     
     print("------Result: \(result)")
 }
+
 sortDictionary(30)
 
 
@@ -312,10 +358,11 @@ sortArrayWithVariadic(params: 1,2,3,4,5,6,7,8)
 func sampleInoutParam(param:inout String) {
     print(param)
     param = "Bilge Adam"
+    param = "Bilge"
     print(param)
 }
 
-var string = "Bilge"
+var string = "Bilge Kadın"
 sampleInoutParam(param: &string)
 
 
@@ -380,9 +427,14 @@ tupleSample = ("Tuple",3,true)
 tupleSample.0
 
 
-var funcTuple:(integerVal:Int, stringVal:String)
+typealias MultipleReturn = (integerVal:Int, stringVal:String)
+typealias Ahmet = String
 
-func calcAve(value:Int)->(integerVal:Int, stringVal:String) {
+typealias YazmayaUsendim = [[Ahmet:[Ahmet]]]
+
+var funcTuple:(integerVal:Int, stringVal:YazmayaUsendim)
+
+func calcAve(value:Int)->MultipleReturn {
     
     let result = value * value
     let stringResult = String(result)
@@ -399,6 +451,8 @@ var tuple = calcAve(value: 70)
 var tuple1 = calcAve(value: 70)
 tuple.integerVal = 1000
 print(tuple.integerVal)
+
+
 
 
 //MARK: -- Enum
