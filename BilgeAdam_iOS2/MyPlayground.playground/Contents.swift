@@ -686,6 +686,8 @@ enum LetterStatus {
     case BB
     case CC
     case FF
+    
+   
 }
 
 func calcAverage(){
@@ -699,10 +701,9 @@ func calcAverage(){
         let secondPercent = Double(exam2) * 0.7
         
         let average = firstPercent + secondPercent
-
+        
         studentArray[index]["average"] = average
     })
-    
     setStatus(array: studentArray)
 }
 
@@ -786,6 +787,7 @@ func findSuccessfulNote(min:Double){
 
 
 
+
 //MARK: -- Financial Status Sample
 
 enum VAT:Double {
@@ -794,58 +796,91 @@ enum VAT:Double {
     case vat20 = 20
 }
 
+enum Currency:Double {
+    case usd = 27.56
+    case euro = 28.99
+    case gbp = 33.44
+    case ytr = 1
+}
+
 enum Expense {
-    case electric(cost:Double)
-    case invoice(cost:Double)
-    case child(cost:Double)
-    case gasoline(cost:Double)
+    case electric(cost:Double,currency:Currency)
+    case invoice(cost:Double,currency:Currency)
+    case child(cost:Double,currency:Currency)
+    case gasoline(cost:Double,currency:Currency)
     
     func calculateTotalCost()->Double{
         
         switch self {
-        case .electric(let cost):
+        case .electric(let cost, let currency):
+            
             let vat = VAT.vat1.rawValue
-            return ((cost * vat) / 100) + cost
-        case .invoice(let cost):
+            let result = ((cost * vat) / 100) + cost
+            return result * currency.rawValue
+            
+        case .invoice(let cost, let currency):
+            
             let vat = VAT.vat10.rawValue
-            return ((cost * vat) / 100) + cost
-        case .child(let cost):
+            let result = ((cost * vat) / 100) + cost
+            return result * currency.rawValue
+            
+        case .child(let cost, let currency):
+            
             let vat = VAT.vat20.rawValue
-            return ((cost * vat) / 100) + cost
-        case .gasoline(let cost):
+            let result = ((cost * vat) / 100) + cost
+            return result * currency.rawValue
+            
+        case .gasoline(let cost, let currency):
+            
             let vat = VAT.vat20.rawValue
-            return ((cost * vat) / 100) + cost
+            let result = ((cost * vat) / 100) + cost
+            return result * currency.rawValue
+            
         }
     }
 }
 
 enum Income {
     
-    case rentHouse(cost:Double)
-    case eCommerce(cost:Double)
-    case rentACar(cost:Double)
-    case software(cost:Double)
-    case bet(cost:Double)
+    case rentHouse(cost:Double,currency:Currency)
+    case eCommerce(cost:Double,currency:Currency)
+    case rentACar(cost:Double,currency:Currency)
+    case software(cost:Double,currency:Currency)
+    case bet(cost:Double,currency:Currency)
     
     func calculateTotalCost()->Double{
         
         
         switch self {
-        case .rentHouse(let cost):
+        case .rentHouse(let cost, let currency):
+            
             let vat = VAT.vat1.rawValue
-            return ((cost * vat) / 100) + cost
-        case .eCommerce(let cost):
+            let result = ((cost * vat) / 100) + cost
+            return result * currency.rawValue
+            
+        case .eCommerce(let cost, let currency):
+            
             let vat = VAT.vat10.rawValue
-            return ((cost * vat) / 100) + cost
-        case .rentACar(let cost):
+            let result = ((cost * vat) / 100) + cost
+            return result * currency.rawValue
+            
+        case .rentACar(let cost, let currency):
+            
             let vat = VAT.vat20.rawValue
-            return ((cost * vat) / 100) + cost
-        case .software(let cost):
+            let result = ((cost * vat) / 100) + cost
+            return result * currency.rawValue
+            
+        case .software(let cost, let currency):
+            
             let vat = VAT.vat20.rawValue
-            return ((cost * vat) / 100) + cost
-        case .bet(let cost):
+            let result = ((cost * vat) / 100) + cost
+            return result * currency.rawValue
+            
+        case .bet(let cost, let currency):
+            
             let vat = VAT.vat10.rawValue
-            return ((cost * vat) / 100) + cost
+            let result = ((cost * vat) / 100) + cost
+            return result * currency.rawValue
         }
     }
 }
@@ -880,15 +915,39 @@ func setFinancialStatus(_ name: String, incomes:Income...,
 
 
 setFinancialStatus("Büşra",
-                   incomes: .bet(cost: 1000),.rentACar(cost: 80000),
-                   expenses: .gasoline(cost: 5000),.invoice(cost: 2000))
+                   incomes: .bet(cost: 1000,currency: .gbp),.rentACar(cost: 80000,currency:.usd),
+                   expenses: .gasoline(cost: 5000,currency:.ytr),.invoice(cost: 2000,currency: .usd))
 
-setFinancialStatus("Deniz", incomes: .rentACar(cost: 60000),.software(cost: 5000), expenses:.invoice(cost: 2000), .gasoline(cost: 100))
+setFinancialStatus("Deniz",
+                   incomes: .bet(cost: 1000,currency: .gbp),.rentACar(cost: 50000,currency:.gbp),
+                   expenses: .gasoline(cost: 2000,currency:.ytr),.invoice(cost: 4000,currency:.euro))
+
+func getDifference(){
+    
+    userArray.forEach({ user in
+        guard let income = user.income, let expense = user.expense else { return }
+       
+        let dif = income - expense
+        
+        switch dif {
+            
+        case 0...2000:
+            print("Sayın: \(user.name). \(dif)₺ tutarında para kazanmışsınız. Devlet olarak elbette ki \(Int(dif * 0.1))₺ kadarına el koyuyoruz.")
+        case 2001...6000:
+            print("Sayın: \(user.name). \(dif)₺ tutarında para kazanmışsınız. Devlet olarak elbette ki \(Int(dif * 0.15))₺ kadarına el koyuyoruz.")
+        case 6001...20000:
+            print("Sayın: \(user.name). \(dif)₺ tutarında para kazanmışsınız. Devlet olarak elbette ki \(Int(dif * 0.2))₺ kadarına el koyuyoruz.")
+        default:
+            print("Sayın: \(user.name). \(dif)₺ tutarında para kazanmışsınız. Devlet olarak elbette ki \(Int(dif * 0.3))₺ kadarına el koyuyoruz.")
+        }
+        
+    })
+}
  
 
-setFinancialStatus("Damla", incomes: .software(cost: 90000), expenses: .electric(cost: 1000),.gasoline(cost: 10000))
-
+getDifference()
 print(userArray)
 
 
  
+
