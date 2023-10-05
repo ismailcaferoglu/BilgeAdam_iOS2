@@ -1,228 +1,197 @@
-//import UIKit
+////import UIKit
 //
 //
-//
-//
-//
-//
-//func modelYarat(){
-//    
-//    print(dictionaryArray)
-//    let result = "Model Yaratıldı"
-//    print("model oluşturuldu")
-//    kalibaYerlestir(model: result)
-//}
-//
-//modelYarat()
-//
-//func tabaniTak(kalip:String){
-//    let result = kalip + "ve takıldı."
-//    print("işlem tamam.")
-//    boyama(ayakkabi: result)
-//}
-//
-//func boyama(ayakkabi:String)-> String {
-//    print(ayakkabi + "Tam anlamıyla harika")
-//    
-//    return "43 numara harika bir ayakkabı üretildi. "
-//}
-//
-//func kalibaYerlestir(model:String){
-//    let result = model + " ve işlendi."
-//    print("Kalıp Hazır")
-//    tabaniTak(kalip: result)
-//}
-//
-//var greeting = "Hello, playground"
-//
-//var firstString:String = "Hello"
-//
-//var pageNonOptional:String!
-//var pageOptional:String?
-//
-//var firstInt:Int = 10
-//var secondInt = 0
-//
-//
-//var firstDouble:Double = 1.5
-//var firstFloat:Float = 2.5
-//
-//let thirdString = "Third"
-//
-////MARK: -- Arrays
-//var nameArray:[String?] = ["Ali","Veli",nil,"Ayşe","Fatma","Hayriye","Hayriye","Hayriye","Hayriye","Hayriye","Hayriye","Hayriye",nil,"Ali","Ali","Ali","Ali","Ali","Mert","Ayça","Mahir","Defne"]
-//var array = [""]
-//var arr = [String]()
-//var ozArray:[String]
-//var hasArray:Array<String>
-//
-// 
-//nameArray.forEach({ name in
-//    print(" name: \(name)")
-//})
-//
-//nameArray.enumerated().forEach({ index,name in
-//    print("for each index:\(index) name: \(name)")
-//})
-//    
-//
-//
-//for x in 0..<nameArray.count {
-//    print("her bir eleman indeksi :")
-//   
-//}
-//
-//for item in nameArray {
-//    
-//}
-//
-//for (sayac,eleman) in nameArray.enumerated() {
-//    print(sayac)
-//    print(eleman)
-//}
-//
-//let filter = nameArray.filter({ $0 == "Hayriye"})
-//print("------........\(filter)")
-//let filteredMehmet = ["Mehmet","Mehmet","Mehmet","Mehmet"].count
-//
-//if filter.count == 0 {
-//    print("Array içinde Mehmet yoktur.")
-//}
-//
-//let test = nameArray.contains(where: {$0 == "Mehmet"})
-//
-//print("---------------\(test)")
-//
-//let flatArray = [[1,2,3],[6,4,3,9],[21,33,5,8,3,6,0,2,7]]
-//
-//let flatResult = flatArray.flatMap({$0})
-//print(flatResult)
-//
-//
-//let filteredArray = nameArray.filter({ name in
-//    name == "Ali"
-//})
-//
-//let filteredArray1 = nameArray.filter({ $0 == "Ali" })
-//print(filteredArray1)
-//
-//let unwrappedArray = nameArray.compactMap({ $0 })
-//
-//print(unwrappedArray)
-//
-//let sortedArray = unwrappedArray.sorted(by: { $0 < $1 })
-//
-//print(sortedArray)
-//
-//nameArray.map({ name in
-//    
-//    let newItem = name?.count
-//})
-//
-//
-//
-////nameArray.remove(at: 1)
-////nameArray.removeAll()
-////nameArray.removeFirst()
-////nameArray.removeLast()
-////nameArray.reverse()
 ////
-////nameArray.removeAll(where: {$0 == "Ali"})
-//
-//
-////MARK: -- Unwrap
-//
-//// Bu yöntemi kullanma.!!!!!!!!!
-//if pageOptional != nil {
-//    pageNonOptional = pageOptional
-//    print(pageNonOptional)
-//}
-//
-//if let pageOptional = pageOptional {
-//    
-//    
-//    pageNonOptional = pageOptional
-//}else {
-//    print("PageOptional nildir.")
-//}
-//
-//
-//let value = pageOptional
-//print(value)
-//
-////guard let tempValue = pageOptional else { return }
-//
-////print(tempValue)
-//
-//
-//let number = "2"
-//
-//let numeric = Int(number)
-//print(numeric)
-//
-////MARK: -- Conditions
-//
-//if firstInt == secondInt || firstInt != 5 {
-//    print("eşittir")
-//}else if firstInt == 1 {
-//    
-//}else {
-//    print("eşit değil")
-//}
-//
-//
-//switch firstInt {
-//case 0:
-//    print("0")
-//case 1:
-//    print("1")
-//case 2:
-//    print("2")
-//default:
-//    print("Sonuç bulanamadı.")
-//}
-//
-//
-//
-//
-//
-//
-////MARK: Type Casting
-//if let age = anyString as? String {
-//    age.count
-//    //print("Sonuç-------\(age + 20)")
-//}
-//
-//if let name = anyDictionary["name"] as? Int {
-//    print(name * name)
-//}
-//
-////MARK: -- Dictionaries
-//
-//var busraDictionary:[String:String] = ["ad":"Büşra",
-//                                        "soyad":"Erim",
-//                                       "yas":"22"]
-//
-//var denizDictionary:[String:String] = ["ad":"Deniz",
-//                                        "soyad":"Atmaca",
-//                                        "yas":"23"]
-//
-//var damlaDictionary:[String:String] = ["ad":"Damla",
-//                                        "soyad":"Erişmiş",
-//                                        "yas":"24"]
-//
-//
-//var dictionaryArray:[  [String:String]  ] = [denizDictionary,damlaDictionary,busraDictionary]
-//
-//
-//
-//busraDictionary["at"] = "Midilli"
-//print(busraDictionary)
-//
-//
-//var anyDictionary:[String:Any] = ["name":"Ali","age":21,"length":1.86,"birthday":2000]
-//
-//
+////var greeting = "Hello, playground"
+////
+////var firstString:String = "Hello"
+////
+////var pageNonOptional:String!
+////var pageOptional:String?
+////
+////var firstInt:Int = 10
+////var secondInt = 0
+////
+////
+////var firstDouble:Double = 1.5
+////var firstFloat:Float = 2.5
+////
+////let thirdString = "Third"
+////
+//////MARK: -- Arrays
+////var nameArray:[String?] = ["Ali","Veli",nil,"Ayşe","Fatma","Hayriye","Hayriye","Hayriye","Hayriye","Hayriye","Hayriye","Hayriye",nil,"Ali","Ali","Ali","Ali","Ali","Mert","Ayça","Mahir","Defne"]
+////var array = [""]
+////var arr = [String]()
+////var ozArray:[String]
+////var hasArray:Array<String>
+////
+//// 
+////nameArray.forEach({ name in
+////    print(" name: \(name)")
+////})
+////
+////nameArray.enumerated().forEach({ index,name in
+////    print("for each index:\(index) name: \(name)")
+////})
+////    
+////
+////
+////for x in 0..<nameArray.count {
+////    print("her bir eleman indeksi :")
+////   
+////}
+////
+////for item in nameArray {
+////    
+////}
+////
+////for (sayac,eleman) in nameArray.enumerated() {
+////    print(sayac)
+////    print(eleman)
+////}
+////
+////let filter = nameArray.filter({ $0 == "Hayriye"})
+////print("------........\(filter)")
+////let filteredMehmet = ["Mehmet","Mehmet","Mehmet","Mehmet"].count
+////
+////if filter.count == 0 {
+////    print("Array içinde Mehmet yoktur.")
+////}
+////
+////let test = nameArray.contains(where: {$0 == "Mehmet"})
+////
+////print("---------------\(test)")
+////
+////let flatArray = [[1,2,3],[6,4,3,9],[21,33,5,8,3,6,0,2,7]]
+////
+////let flatResult = flatArray.flatMap({$0})
+////print(flatResult)
+////
+////
+////let filteredArray = nameArray.filter({ name in
+////    name == "Ali"
+////})
+////
+////let filteredArray1 = nameArray.filter({ $0 == "Ali" })
+////print(filteredArray1)
+////
+////let unwrappedArray = nameArray.compactMap({ $0 })
+////
+////print(unwrappedArray)
+////
+////let sortedArray = unwrappedArray.sorted(by: { $0 < $1 })
+////
+////print(sortedArray)
+////
+////nameArray.map({ name in
+////    
+////    let newItem = name?.count
+////})
+////
+////
+////
+//////nameArray.remove(at: 1)
+//////nameArray.removeAll()
+//////nameArray.removeFirst()
+//////nameArray.removeLast()
+//////nameArray.reverse()
+//////
+//////nameArray.removeAll(where: {$0 == "Ali"})
+////
+////
+//////MARK: -- Unwrap
+////
+////// Bu yöntemi kullanma.!!!!!!!!!
+////if pageOptional != nil {
+////    pageNonOptional = pageOptional
+////    print(pageNonOptional)
+////}
+////
+////if let pageOptional = pageOptional {
+////    
+////    
+////    pageNonOptional = pageOptional
+////}else {
+////    print("PageOptional nildir.")
+////}
+////
+////
+////let value = pageOptional
+////print(value)
+////
+//////guard let tempValue = pageOptional else { return }
+////
+//////print(tempValue)
+////
+////
+////let number = "2"
+////
+////let numeric = Int(number)
+////print(numeric)
+////
+//////MARK: -- Conditions
+////
+////if firstInt == secondInt || firstInt != 5 {
+////    print("eşittir")
+////}else if firstInt == 1 {
+////    
+////}else {
+////    print("eşit değil")
+////}
+////
+////
+////switch firstInt {
+////case 0:
+////    print("0")
+////case 1:
+////    print("1")
+////case 2:
+////    print("2")
+////default:
+////    print("Sonuç bulanamadı.")
+////}
+////
+////
+////
+////
+////
+////
+//////MARK: Type Casting
+////if let age = anyString as? String {
+////    age.count
+////    //print("Sonuç-------\(age + 20)")
+////}
+////
+////if let name = anyDictionary["name"] as? Int {
+////    print(name * name)
+////}
+////
+//////MARK: -- Dictionaries
+////
+////var busraDictionary:[String:String] = ["ad":"Büşra",
+////                                        "soyad":"Erim",
+////                                       "yas":"22"]
+////
+////var denizDictionary:[String:String] = ["ad":"Deniz",
+////                                        "soyad":"Atmaca",
+////                                        "yas":"23"]
+////
+////var damlaDictionary:[String:String] = ["ad":"Damla",
+////                                        "soyad":"Erişmiş",
+////                                        "yas":"24"]
+////
+////
+////var dictionaryArray:[  [String:String]  ] = [denizDictionary,damlaDictionary,busraDictionary]
+////
+////
+////
+////busraDictionary["at"] = "Midilli"
+////print(busraDictionary)
+////
+////
+////var anyDictionary:[String:Any] = ["name":"Ali","age":21,"length":1.86,"birthday":2000]
+////
+////
 //var iosClassArray:[[String:Any]] = [["name":"Büşra","age":21,"length":1.86,"birthday":2000,"isPass":false],
 //                                    ["name":"Deniz","age":21,"length":1.86,"birthday":2000,"isPass":false],
 //                                    ["name":"Damla","age":21,"length":1.86,"birthday":2000,"isPass":false],
@@ -250,7 +219,7 @@
 //})
 //
 //print(dictionaryArray)
-//
+///*
 //damlaDictionary["yas"] = "22"
 //denizDictionary["ad"] = "Damla"
 //
@@ -271,7 +240,7 @@
 //
 //print("-----\(damlaDictionary)")
 //
-//
+//*/
 //
 ////MARK: -- Sets
 //var array2Set = Set(unwrappedArray)
@@ -296,6 +265,34 @@
 //
 //
 ////MARK: --- Functions
+//
+//func modelYarat(){
+//
+//    print(dictionaryArray)
+//    let result = "Model Yaratıldı"
+//    print("model oluşturuldu")
+//    kalibaYerlestir(model: result)
+//}
+//
+//modelYarat()
+//
+//func tabaniTak(kalip:String){
+//    let result = kalip + "ve takıldı."
+//    print("işlem tamam.")
+//    boyama(ayakkabi: result)
+//}
+//
+//func boyama(ayakkabi:String)-> String {
+//    print(ayakkabi + "Tam anlamıyla harika")
+//
+//    return "43 numara harika bir ayakkabı üretildi. "
+//}
+//
+//func kalibaYerlestir(model:String){
+//    let result = model + " ve işlendi."
+//    print("Kalıp Hazır")
+//    tabaniTak(kalip: result)
+//}
 //
 //func sortDictionaryById(){
 //    print("sortDictionaryById")
@@ -325,28 +322,28 @@
 //let returnValue = sortDictionaryWithReturn()
 //print(returnValue)
 //
-////func sortWithUserName(data:[[String:String]])->[[String:String]]{
-////    
-////    let sorted = data.sorted(by: { name1, name2 in
-////        let name1Value = name1["ad"] ?? ""
-////        let name2Value = name2["ad"] ?? ""
-////        
-////        return name1Value < name2Value
-////    })
-////    
-////    
-////    let sortedArray = data.sorted(by: { $0["ad"]! < $1["ad"]! })
-////    
-////    return sorted
-////}
-////
-////print("------SortedArray : \(sortWithUserName(data: dictionaryArray))")
+//func sortWithUserName(data:[[String:String]])->[[String:String]]{
+//    
+//    let sorted = data.sorted(by: { name1, name2 in
+//        let name1Value = name1["ad"] ?? ""
+//        let name2Value = name2["ad"] ?? ""
+//        
+//        return name1Value < name2Value
+//    })
+//    
+//    
+//    let sortedArray = data.sorted(by: { $0["ad"]! < $1["ad"]! })
+//    
+//    return sorted
+//}
 //
-////let uppercased = sortDictionaryWithParamsWithReturn(data: "Bilge Adam Kadıköy Şubesi, iOS-2 Eğitimi")
+//print("------SortedArray : \(sortWithUserName(data: dictionaryArray))")
+//
+//let uppercased = sortDictionaryWithParamsWithReturn(data: "Bilge Adam Kadıköy Şubesi, iOS-2 Eğitimi")
 //
 //
-////sortDictionaryWithParamsWithReturn(data: "Bilge Adam Kadıköy Şubesi, iOS-2 Eğitimi")
-////print(uppercased)
+//sortDictionaryWithParamsWithReturn(data: "Bilge Adam Kadıköy Şubesi, iOS-2 Eğitimi")
+//print(uppercased)
 //
 //func sortArrayWithVariadic(params:Int...) {
 //    
@@ -455,9 +452,7 @@
 //var tuple1 = calcAve(value: 70)
 //tuple.integerVal = 1000
 //print(tuple.integerVal)
-//
-//
-//
+// 
 //
 ////MARK: -- Enum
 //
@@ -489,7 +484,7 @@
 //        }
 //    }
 //}
-
+//
 //enum Car1:String {
 //    case audi = "Alman otomobilidir."
 //    case volvo = "İsveçli otomobilidir."
@@ -548,6 +543,8 @@
 //
 //
 //
+//
+////MARK: -- BMI Calculation Sample
 //enum BMI:String {
 //    case thin = "Zayıfsın"
 //    case normal = "Dipçik gibisin"
@@ -614,28 +611,34 @@
 //    showAverageBy(status: .thin, data: userArray)
 //}
 //
+//
+//
 //func showAverageBy(status:BMI, data:[TupleNickname]){
 //    
-////    let filtered = data.filter ({ $0.status == status })
-////    
-////    if !filtered.isEmpty {
-////        
-////        var sum:Int = 0
-////        
-////        filtered.forEach({
-////            sum = sum + $0.age
-////        })
-////        
-////        var result = sum / filtered.count
-////        print("\(status) olanların yaş ortalaması: \(result). Uzman mesajları: \(status.rawValue) ")
-////        
-////    }else {
-////        print("Bu kategoride kimse bulunamadı.")
-////    }
+//    let filtered = data.filter ({ $0.status == status })
+//    
+//    if !filtered.isEmpty {
+//        
+//        var sum:Int = 0
+//        
+//        filtered.forEach({
+//            sum = sum + $0.age
+//        })
+//        
+//        var result = sum / filtered.count
+//        print("\(status) olanların yaş ortalaması: \(result). Uzman mesajları: \(status.rawValue) ")
+//        
+//    }else {
+//        print("Bu kategoride kimse bulunamadı.")
+//    }
 //     
 //}
 //
-//let numbersArray = [6]
+//
+//
+////MARK: -- Prime Number Sample
+//
+//var numbersArray = [9,5]
 //
 //func setPrime(){
 //    
@@ -662,292 +665,410 @@
 //}
 //
 //setPrime()
-
-
-
-//MARK: -- Student Note Sample
-var studentArray:[[String:Any]] = [
-                                   ["name":"Büşra","exam_first":40,"exam_second":60],
-                                   ["name":"Deniz","exam_first":20,"exam_second":30],
-                                   ["name":"Damla","exam_first":70,"exam_second":50],
-                                   ["name":"Ece","exam_first":30,"exam_second":90],
-                                   ["name":"Barış","exam_first":100,"exam_second":20],
-                                   ["name":"Sabri","exam_first":70,"exam_second":40],
-                                   ["name":"Oğuzhan","exam_first":90,"exam_second":70],
-                                   ["name":"Orhan","exam_first":65,"exam_second":35],
-                                   ["name":"Burak","exam_first":70,"exam_second":30],
-                                   ["name":"Aydın","exam_first":80,"exam_second":80],
-                                   ["name":"Oğuz","exam_first":45,"exam_second":75]]
-
-
-enum LetterStatus {
-    case AA
-    case BA
-    case BB
-    case CC
-    case FF
-    
-   
-}
-
-func calcAverage(){
-    
-    studentArray.enumerated().forEach({ index,item in
-        
-        guard let exam1 = item["exam_first"] as? Int else { return }
-        guard let exam2 = item["exam_second"] as? Int else { return }
-        
-        let firstPercent = Double(exam1) * 0.3
-        let secondPercent = Double(exam2) * 0.7
-        
-        let average = firstPercent + secondPercent
-        
-        studentArray[index]["average"] = average
-    })
-    setStatus(array: studentArray)
-}
-
-calcAverage()
-
-typealias StudentType = [String:Any]
-
-func setStatus(array:[StudentType]) {
-    
-    array.enumerated().forEach({ index,item in
-        
-        guard let item = item["average"] as? Double else { return }
-      
-        switch item {
-        case 85..<100:
-            studentArray[index]["status"] = LetterStatus.AA
-        case 70..<85:
-            studentArray[index]["status"] = LetterStatus.BB
-        case 55..<70:
-            studentArray[index]["status"] = LetterStatus.BA
-        case 40..<55:
-            studentArray[index]["status"] = LetterStatus.CC
-        case 0..<40:
-            studentArray[index]["status"] = LetterStatus.FF
-        default:
-            break
-        }
-        
-    })
-    print(studentArray)
-     calcMinAverage(array: studentArray)
-}
-
-
-func calcMinAverage(array:[[String:Any]]){
-    print(array)
-    let filtered = array.filter({ item in
-        guard let status = item["status"] as? LetterStatus else { return false }
-        
-        switch status {
-        
-        case .CC:
-            return true
-        default:
-            return false
-        }
-        
-    })
-    
-    print(filtered)
-    let minValue = filtered.min(by: { (item1,item2) in
-        guard let item1 = item1["average"] as? Double else { return false }
-        guard let item2 = item2["average"] as? Double else { return false }
-        
-        return item1 < item2
-    })
-    
-    print(minValue)
-    guard let minValue = minValue?["average"] as? Double else { return }
-    print(minValue)
-    findSuccessfulNote(min: minValue)
-    
-}
-
-func findSuccessfulNote(min:Double){
-    
-    let filtered = studentArray.filter { item in
-        guard let item = item["status"] as? LetterStatus else { return false }
-        
-        return item == .FF
-    }
-    
-    filtered.forEach({ item in
-        guard let item = item["average"] as? Double else { return }
-        
-        let result = min - item
-        print("Puanın:\(item). \(result) puan daha alsaydın büyük insan olacaktın.")
-        
-    })
-}
-
-
-
-
-//MARK: -- Financial Status Sample
-
-enum VAT:Double {
-    case vat1 = 1
-    case vat10 = 10
-    case vat20 = 20
-}
-
-enum Currency:Double {
-    case usd = 27.56
-    case euro = 28.99
-    case gbp = 33.44
-    case ytr = 1
-}
-
-enum Expense {
-    case electric(cost:Double,currency:Currency)
-    case invoice(cost:Double,currency:Currency)
-    case child(cost:Double,currency:Currency)
-    case gasoline(cost:Double,currency:Currency)
-    
-    func calculateTotalCost()->Double{
-        
-        switch self {
-        case .electric(let cost, let currency):
-            
-            let vat = VAT.vat1.rawValue
-            let result = ((cost * vat) / 100) + cost
-            return result * currency.rawValue
-            
-        case .invoice(let cost, let currency):
-            
-            let vat = VAT.vat10.rawValue
-            let result = ((cost * vat) / 100) + cost
-            return result * currency.rawValue
-            
-        case .child(let cost, let currency):
-            
-            let vat = VAT.vat20.rawValue
-            let result = ((cost * vat) / 100) + cost
-            return result * currency.rawValue
-            
-        case .gasoline(let cost, let currency):
-            
-            let vat = VAT.vat20.rawValue
-            let result = ((cost * vat) / 100) + cost
-            return result * currency.rawValue
-            
-        }
-    }
-}
-
-enum Income {
-    
-    case rentHouse(cost:Double,currency:Currency)
-    case eCommerce(cost:Double,currency:Currency)
-    case rentACar(cost:Double,currency:Currency)
-    case software(cost:Double,currency:Currency)
-    case bet(cost:Double,currency:Currency)
-    
-    func calculateTotalCost()->Double{
-        
-        
-        switch self {
-        case .rentHouse(let cost, let currency):
-            
-            let vat = VAT.vat1.rawValue
-            let result = ((cost * vat) / 100) + cost
-            return result * currency.rawValue
-            
-        case .eCommerce(let cost, let currency):
-            
-            let vat = VAT.vat10.rawValue
-            let result = ((cost * vat) / 100) + cost
-            return result * currency.rawValue
-            
-        case .rentACar(let cost, let currency):
-            
-            let vat = VAT.vat20.rawValue
-            let result = ((cost * vat) / 100) + cost
-            return result * currency.rawValue
-            
-        case .software(let cost, let currency):
-            
-            let vat = VAT.vat20.rawValue
-            let result = ((cost * vat) / 100) + cost
-            return result * currency.rawValue
-            
-        case .bet(let cost, let currency):
-            
-            let vat = VAT.vat10.rawValue
-            let result = ((cost * vat) / 100) + cost
-            return result * currency.rawValue
-        }
-    }
-}
-
-typealias UserObject = (name:String, income:Double?, expense:Double?)
-
-var userArray:[UserObject] = [(name:"Büşra",income:nil,expense:nil),
-                              (name:"Deniz",income:nil,expense:nil),
-                              (name:"Damla",income:nil,expense:nil)]
-
-
-func setFinancialStatus(_ name: String, incomes:Income...,
-                        expenses:Expense...){
-    
-    
-    let totalIncome = incomes.reduce(0, { value,item in
-        return value + item.calculateTotalCost()
-    })
-    
-    let totalExpense = expenses.reduce(0, { value,item in
-        return value + item.calculateTotalCost()
-    })
-    
-    userArray.enumerated().forEach({ index,user in
-        if user.name == name {
-            userArray[index].income = totalIncome
-            userArray[index].expense = totalExpense
-        }
-    })
-
-}
-
-
-setFinancialStatus("Büşra",
-                   incomes: .bet(cost: 1000,currency: .gbp),.rentACar(cost: 80000,currency:.usd),
-                   expenses: .gasoline(cost: 5000,currency:.ytr),.invoice(cost: 2000,currency: .usd))
-
-setFinancialStatus("Deniz",
-                   incomes: .bet(cost: 1000,currency: .gbp),.rentACar(cost: 50000,currency:.gbp),
-                   expenses: .gasoline(cost: 2000,currency:.ytr),.invoice(cost: 4000,currency:.euro))
-
-func getDifference(){
-    
-    userArray.forEach({ user in
-        guard let income = user.income, let expense = user.expense else { return }
-       
-        let dif = income - expense
-        
-        switch dif {
-            
-        case 0...2000:
-            print("Sayın: \(user.name). \(dif)₺ tutarında para kazanmışsınız. Devlet olarak elbette ki \(Int(dif * 0.1))₺ kadarına el koyuyoruz.")
-        case 2001...6000:
-            print("Sayın: \(user.name). \(dif)₺ tutarında para kazanmışsınız. Devlet olarak elbette ki \(Int(dif * 0.15))₺ kadarına el koyuyoruz.")
-        case 6001...20000:
-            print("Sayın: \(user.name). \(dif)₺ tutarında para kazanmışsınız. Devlet olarak elbette ki \(Int(dif * 0.2))₺ kadarına el koyuyoruz.")
-        default:
-            print("Sayın: \(user.name). \(dif)₺ tutarında para kazanmışsınız. Devlet olarak elbette ki \(Int(dif * 0.3))₺ kadarına el koyuyoruz.")
-        }
-        
-    })
-}
- 
+//
+//
+//
+////MARK: -- Student Note Sample
+//var studentArray:[[String:Any]] = [
+//                                   ["name":"Büşra","exam_first":40,"exam_second":60],
+//                                   ["name":"Deniz","exam_first":20,"exam_second":30],
+//                                   ["name":"Damla","exam_first":70,"exam_second":50],
+//                                   ["name":"Ece","exam_first":30,"exam_second":90],
+//                                   ["name":"Barış","exam_first":100,"exam_second":20],
+//                                   ["name":"Sabri","exam_first":70,"exam_second":40],
+//                                   ["name":"Oğuzhan","exam_first":90,"exam_second":70],
+//                                   ["name":"Orhan","exam_first":65,"exam_second":35],
+//                                   ["name":"Burak","exam_first":70,"exam_second":30],
+//                                   ["name":"Aydın","exam_first":80,"exam_second":80],
+//                                   ["name":"Oğuz","exam_first":45,"exam_second":75]]
+//
+//
+//enum LetterStatus {
+//    case AA
+//    case BA
+//    case BB
+//    case CC
+//    case FF
+//    
+//   
+//}
+//
+//func calcAverage(){
+//    
+//    studentArray.enumerated().forEach({ index,item in
+//        
+//        guard let exam1 = item["exam_first"] as? Int else { return }
+//        guard let exam2 = item["exam_second"] as? Int else { return }
+//        
+//        let firstPercent = Double(exam1) * 0.3
+//        let secondPercent = Double(exam2) * 0.7
+//        
+//        let average = firstPercent + secondPercent
+//        
+//        studentArray[index]["average"] = average
+//    })
+//    setStatus(array: studentArray)
+//}
+//
+//calcAverage()
+//
+//typealias StudentType = [String:Any]
+//
+//func setStatus(array:[StudentType]) {
+//    
+//    array.enumerated().forEach({ index,item in
+//        
+//        guard let item = item["average"] as? Double else { return }
+//      
+//        switch item {
+//        case 85..<100:
+//            studentArray[index]["status"] = LetterStatus.AA
+//        case 70..<85:
+//            studentArray[index]["status"] = LetterStatus.BB
+//        case 55..<70:
+//            studentArray[index]["status"] = LetterStatus.BA
+//        case 40..<55:
+//            studentArray[index]["status"] = LetterStatus.CC
+//        case 0..<40:
+//            studentArray[index]["status"] = LetterStatus.FF
+//        default:
+//            break
+//        }
+//        
+//    })
+//    print(studentArray)
+//     calcMinAverage(array: studentArray)
+//}
+//
+//
+//func calcMinAverage(array:[[String:Any]]){
+//    print(array)
+//    let filtered = array.filter({ item in
+//        guard let status = item["status"] as? LetterStatus else { return false }
+//        
+//        switch status {
+//        
+//        case .CC:
+//            return true
+//        default:
+//            return false
+//        }
+//        
+//    })
+//    
+//    print(filtered)
+//    let minValue = filtered.min(by: { (item1,item2) in
+//        guard let item1 = item1["average"] as? Double else { return false }
+//        guard let item2 = item2["average"] as? Double else { return false }
+//        
+//        return item1 < item2
+//    })
+//    
+//    print(minValue)
+//    guard let minValue = minValue?["average"] as? Double else { return }
+//    print(minValue)
+//    findSuccessfulNote(min: minValue)
+//    
+//}
+//
+//func findSuccessfulNote(min:Double){
+//    
+//    let filtered = studentArray.filter { item in
+//        guard let item = item["status"] as? LetterStatus else { return false }
+//        
+//        return item == .FF
+//    }
+//    
+//    filtered.forEach({ item in
+//        guard let item = item["average"] as? Double else { return }
+//        
+//        let result = min - item
+//        print("Puanın:\(item). \(result) puan daha alsaydın büyük insan olacaktın.")
+//        
+//    })
+//}
+//
+//
+//
+//
+////MARK: -- Financial Status Sample
+//
+//enum VAT:Double {
+//    case vat1 = 1
+//    case vat10 = 10
+//    case vat20 = 20
+//}
+//
+//enum Currency:Double {
+//    case usd = 27.56
+//    case euro = 28.99
+//    case gbp = 33.44
+//    case ytr = 1
+//}
+//
+//enum Expense {
+//    case electric(cost:Double,currency:Currency)
+//    case invoice(cost:Double,currency:Currency)
+//    case child(cost:Double,currency:Currency)
+//    case gasoline(cost:Double,currency:Currency)
+//    
+//    func calculateTotalCost()->Double{
+//        
+//        switch self {
+//        case .electric(let cost, let currency):
+//            
+//            let vat = VAT.vat1.rawValue
+//            let result = ((cost * vat) / 100) + cost
+//            return result * currency.rawValue
+//            
+//        case .invoice(let cost, let currency):
+//            
+//            let vat = VAT.vat10.rawValue
+//            let result = ((cost * vat) / 100) + cost
+//            return result * currency.rawValue
+//            
+//        case .child(let cost, let currency):
+//            
+//            let vat = VAT.vat20.rawValue
+//            let result = ((cost * vat) / 100) + cost
+//            return result * currency.rawValue
+//            
+//        case .gasoline(let cost, let currency):
+//            
+//            let vat = VAT.vat20.rawValue
+//            let result = ((cost * vat) / 100) + cost
+//            return result * currency.rawValue
+//            
+//        }
+//    }
+//}
+//
+//enum Income {
+//    
+//    case rentHouse(cost:Double,currency:Currency)
+//    case eCommerce(cost:Double,currency:Currency)
+//    case rentACar(cost:Double,currency:Currency)
+//    case software(cost:Double,currency:Currency)
+//    case bet(cost:Double,currency:Currency)
+//    
+//    func calculateTotalCost()->Double{
+//        
+//        
+//        switch self {
+//        case .rentHouse(let cost, let currency):
+//            
+//            let vat = VAT.vat1.rawValue
+//            let result = ((cost * vat) / 100) + cost
+//            return result * currency.rawValue
+//            
+//        case .eCommerce(let cost, let currency):
+//            
+//            let vat = VAT.vat10.rawValue
+//            let result = ((cost * vat) / 100) + cost
+//            return result * currency.rawValue
+//            
+//        case .rentACar(let cost, let currency):
+//            
+//            let vat = VAT.vat20.rawValue
+//            let result = ((cost * vat) / 100) + cost
+//            return result * currency.rawValue
+//            
+//        case .software(let cost, let currency):
+//            
+//            let vat = VAT.vat20.rawValue
+//            let result = ((cost * vat) / 100) + cost
+//            return result * currency.rawValue
+//            
+//        case .bet(let cost, let currency):
+//            
+//            let vat = VAT.vat10.rawValue
+//            let result = ((cost * vat) / 100) + cost
+//            return result * currency.rawValue
+//        }
+//    }
+//}
+//
+//typealias UserObject = (name:String, income:Double?, expense:Double?)
+//
+//var userArray:[UserObject] = [(name:"Büşra",income:nil,expense:nil),
+//                              (name:"Deniz",income:nil,expense:nil),
+//                              (name:"Damla",income:nil,expense:nil)]
+//
+//
+//func setFinancialStatus(_ name: String, incomes:Income...,
+//                        expenses:Expense...){
+//    
+//    
+//    let totalIncome = incomes.reduce(0, { value,item in
+//        return value + item.calculateTotalCost()
+//    })
+//    
+//    let totalExpense = expenses.reduce(0, { value,item in
+//        return value + item.calculateTotalCost()
+//    })
+//    
+//    userArray.enumerated().forEach({ index,user in
+//        if user.name == name {
+//            userArray[index].income = totalIncome
+//            userArray[index].expense = totalExpense
+//        }
+//    })
+//
+//}
+//
+//
+//setFinancialStatus("Büşra",
+//                   incomes: .bet(cost: 1000,currency: .gbp),.rentACar(cost: 80000,currency:.usd),
+//                   expenses: .gasoline(cost: 5000,currency:.ytr),.invoice(cost: 2000,currency: .usd))
+//
+//setFinancialStatus("Deniz",
+//                   incomes: .bet(cost: 1000,currency: .gbp),.rentACar(cost: 50000,currency:.gbp),
+//                   expenses: .gasoline(cost: 2000,currency:.ytr),.invoice(cost: 4000,currency:.euro))
+//
+//func getDifference(){
+//    
+//    userArray.forEach({ user in
+//        guard let income = user.income, let expense = user.expense else { return }
+//       
+//        let dif = income - expense
+//        
+//        switch dif {
+//            
+//        case 0...2000:
+//            print("Sayın: \(user.name). \(dif)₺ tutarında para kazanmışsınız. Devlet olarak elbette ki \(Int(dif * 0.1))₺ kadarına el koyuyoruz.")
+//        case 2001...6000:
+//            print("Sayın: \(user.name). \(dif)₺ tutarında para kazanmışsınız. Devlet olarak elbette ki \(Int(dif * 0.15))₺ kadarına el koyuyoruz.")
+//        case 6001...20000:
+//            print("Sayın: \(user.name). \(dif)₺ tutarında para kazanmışsınız. Devlet olarak elbette ki \(Int(dif * 0.2))₺ kadarına el koyuyoruz.")
+//        default:
+//            print("Sayın: \(user.name). \(dif)₺ tutarında para kazanmışsınız. Devlet olarak elbette ki \(Int(dif * 0.3))₺ kadarına el koyuyoruz.")
+//        }
+//        
+//    })
+//}
+// 
 
 getDifference()
 print(userArray)
 
-
  
 
+//MARK: -- Closures
+typealias SampleClosure = (String)->Void
+
+
+var closureSample:(()->Void)!
+var closureVariable:String
+
+var closureSampleWithDefault:()->Void = { print("test")}
+var closureWithParam:(String)->String
+
+closureSample = { print("deneme") }
+closureVariable = "Bilge Adam"
+closureWithParam = { item in
+     return item
+}
+
+closureSample()
+closureSampleWithDefault()
+closureWithParam("Örnek")
+
+
+func sampleFunctionWithClosure(name:String, surname:String, callback:SampleClosure){
+    
+    print(name)
+    callback(name)
+    print(surname)
+}
+
+sampleFunctionWithClosure(name: "Ali", surname: "Yılmaz", callback: { isim in
+    
+    print("\(isim) bilgisi fonksiyon içinden geldi. ")
+    
+})
+
+enum CategoryPrice:Double {
+    
+    case luxury = 5000
+    case ultraLuxury = 10000
+    case eco = 1000
+}
+ 
+enum FuelType:Double {
+    case benzin = 34.68
+    case diesel = 40.16
+    case lpg = 18.13
+    case electric = 5.6
+}
+
+typealias AverageCalculator = (Double,Double)->Double
+typealias AverageConsumption = (rentingCost:Double, averageConsumption:Double)
+
+
+
+//MARK: -- Car Rent Sample
+var carArray:[[String:Any]] = [["brand":"Volvo",
+                                "category":CategoryPrice.luxury,
+                                "fuel":FuelType.diesel,
+                                "modelYear":2018,
+                                "kml":0.15],
+                               ["brand":"Audi",
+                                "category":CategoryPrice.luxury,
+                                "fuel":FuelType.benzin,
+                                "modelYear":2019,
+                                "kml":0.2],
+                               ["brand":"Fiat",
+                                "category":CategoryPrice.eco,
+                                "fuel":FuelType.lpg,
+                                "modelYear":2015,
+                                "kml":0.05],
+                               ["brand":"Rolls Royce",
+                                "category":CategoryPrice.ultraLuxury,
+                                "fuel":FuelType.benzin,
+                                "modelYear":2024,
+                                "kml":2.5]]
+
+
+
+func findByCategory(fuel:FuelType,category:CategoryPrice){
+    
+}
+
+
+func showAllCost(duration:Int, range:Double, brand:String, average:AverageCalculator)->AverageConsumption?{
+    
+    let filterByBrand = carArray.filter({ item in
+        guard let car = item["brand"] as? String else { return false }
+        return car == brand
+    })
+   
+    if !filterByBrand.isEmpty {
+        guard let carItem = filterByBrand.first else { return nil}
+       
+        guard let category = carItem["category"] as? CategoryPrice else { return nil }
+        
+        let rentingCost = category.rawValue * Double(duration)
+        
+        guard let consumption = carItem["kml"] as? Double else { return nil}
+        guard let fuelType = carItem["fuel"] as? FuelType else { return nil }
+        
+        let totalConsumptionInRange = consumption * range
+        let fuelCost = average(totalConsumptionInRange, fuelType.rawValue)
+        
+        return (rentingCost,fuelCost)
+    }else {
+        print("\(brand) marka araç bulunamadı.")
+        return nil
+    }
+    
+}
+
+
+let result = showAllCost(duration: 15, range: 5000, brand: "Fiat", average: { range,fuelPrice in
+
+    return range * fuelPrice
+})
+
+print(result?.averageConsumption ?? "")
+print(result?.rentingCost ?? "")
+ 
